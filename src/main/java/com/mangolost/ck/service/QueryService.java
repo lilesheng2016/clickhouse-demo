@@ -15,9 +15,8 @@ import java.util.Map;
 public class QueryService {
 
     @Autowired
-    @Qualifier("testCkTemplate")
-    private JdbcTemplate testCkTemplate;
-
+    @Qualifier("test1CkReadTemplate")
+    private JdbcTemplate test1CkReadTemplate;
 
     /**
      *
@@ -25,8 +24,7 @@ public class QueryService {
      * @return
      */
     public List<Map<String, Object>> query(String sql) {
-
-        List<Map<String, Object>> list = testCkTemplate.queryForList(sql);
+        List<Map<String, Object>> list = test1CkReadTemplate.queryForList(sql);
         return list;
     }
 
